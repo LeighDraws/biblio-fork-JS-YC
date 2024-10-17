@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Uchen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap');
+
+body {
+    background-color: #181818;
+    width: 100%;
+    background-image: url(../src/img/blur1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0;
+    margin: 0;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+#logwrap {
+    display: block;
+    width: 430px;
+    height: 90vh;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+.slogan {
+width: 200px;
+display: block;
+}
+
+
+.reading {
+    color: white;
+    font-family: "Uchen", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 54px;
+    line-height: 50px;
+}
+
+.illus img {
+    display: block;
+    width: 300px;
+    margin-left: 130px;
+    height: 300px;
+}
+
+.boutons {
+    width: 400px;
+    display: block;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+.red-btn {
+    text-decoration: none;
+    background-color: #CE2020;
+    border-radius: 50px;
+    width: 300px;
+    height: 60px;
+    display: block;
+    color: white;
+    border: none;
+    margin: 0 auto;
+    font-family: "Ubuntu Sans", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.white-btn {
+    text-decoration: none;
+    background-color: white;
+    border-radius: 50px;
+    width: 300px;
+    height: 60px;
+    display: block;
+    color: #CE2020;
+    border: none;
+    margin: 0 auto;
+    font-family: "Ubuntu Sans", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 20px;
+    
+}
+
+.white-btn-form {
+    text-decoration: none;
+    background-color: white;
+    border-radius: 50px;
+    width: 300px;
+    height: 60px;
+    display: block;
+    color: #CE2020;
+    border: none;
+    margin: 0 auto;
+    font-family: "Ubuntu Sans", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+hr {
+    border: none;
+    border-top: 2px solid white;
+    color: white;
+    overflow: visible;
+    text-align: center;
+    height: 5px;
+    margin-top: 25px;
+}
+
+.signup {
+    color: white;
+    font-family: "Ubuntu Sans", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+.boutons ::placeholder {
+    color: grey;
+    font-size: 20px;
+    font-family: "Ubuntu Sans", sans-serif;
+    font-weight: 100;
+}
+
+input ::placeholder{
+    margin-left: 100px;
+}
+
+.validate {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+    background-color:#CE2020 ;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+
+
+#feedwrap {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+}
+
+nav {
+    width: 100%;
+    height: 170px;
+    background-color: black;
+    display: block;
+    padding: 0 0;
+    position: fixed;
+    top: 0;
+    
+    
+}
+
+nav #logo {
+    width: 100px;
+    display: block;
+    margin: 0 auto;
+    padding-top: 70px;
+}
+
+nav #menu {
+    position: absolute;
+    top: 77px;
+    right: 55px;
+}
+
+nav #menu img {
+    margin-left: 30px;
+    height: 20px;
+}
+
+#start {
+    width: 100%;
+    height: 200px;
+    display: block;
+}
+
+section .scrollx {
+    
+}
+
+
+section h2 {
+    color: white;
+    font-family: "Ubuntu Sans", sans-serif;
+    font-weight: bold;
+    font-size: 26px;
+    text-align: left;
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    position: sticky;
+
+}
+
+section h2::before{
+    content: " . ";
+    background-color: #CE2020;
+    color: #CE2020;
+    margin-right: 10px;
+
+    
+}
+
+.textwraper {
+    
+}
+
+.storybooks {
+    display: flex;
+    margin-top: 50px;
+    overflow-x: auto;
+    white-space: nowrap;
+
+}
+
+/* Cacher la barre de défilement pour Chrome, Safari et Opera */
+.storybooks::-webkit-scrollbar {
+    display: none;
+    }
+
+/* Cacher la barre de défilement pour IE et Edge */
+.storybooks {
+    -ms-overflow-style: none;
+}
+    
+/* Cacher la barre de défilement pour Firefox */
+.storybooks {
+    scrollbar-width: none;
+    
+}
+
+.book {
+    width: 190px;
+    display: inline-block;
+    margin-left: 40px;
+    margin-right: 40px;
+    
+
+}
+
+.book img {
+    border-radius: 12px;
+    height: 260px;
+    width: 190px;
+    object-fit: cover;
+}
+
+
