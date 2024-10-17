@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap');
 
 body {
-    background-color: #181818;
+    background-color: #1B1A1A;
     width: 100%;
     background-image: url(../src/img/blur1.png);
     background-position: center;
@@ -154,16 +154,21 @@ input ::placeholder{
     width: 100%;
     padding: 0;
     margin: 0 auto;
+    background-color: #1B1A1A;
 }
 
 nav {
     width: 100%;
     height: 170px;
-    background-color: black;
+    background-color: #1B1A1A;
     display: block;
     padding: 0 0;
     position: fixed;
     top: 0;
+    z-index: 100;
+    -webkit-box-shadow: -1px 6px 30px 5px rgba(0,0,0,0.75);
+-moz-box-shadow: -1px 6px 30px 5px rgba(0,0,0,0.75);
+box-shadow: -1px 6px 30px 5px rgba(0,0,0,0.75);
     
     
 }
@@ -262,4 +267,91 @@ section h2::before{
 
 section{
     margin-bottom: 50px;
+}
+
+.cards {
+    display: block;
+    margin: 0 auto;
+    width: 390px;
+   
+}
+
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+ 
+    border-radius: 12px;
+    margin: 0 auto;
+    width: 100%;
+
+    
+}
+
+.card img {
+    height: 170px;
+    width: 100%;
+    margin-bottom: -20px;
+    object-fit: cover;
+    border-top-left-radius: 12px;
+border-top-right-radius: 12px;
+}
+
+.container {
+    padding: 3px 16px;
+    position: relative;
+    margin-bottom: 30px;
+    background-color: #242424;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.mark {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    right: 40px;
+
+}
+
+.dots {
+    width: 7px;
+    height: 7px;
+    position: absolute;
+    top: 0;
+    right: 20px;
+
+}
+
+.mark img {
+    object-fit: contain;
+}
+
+.dots img {
+    object-fit: contain;
+}
+
+
+h3 {
+    color: white;
+    font-family: "Ubuntu Sans", sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.auteur {
+    color: #F23D3D;
+    font-family: "Ubuntu Sans", sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.time {
+    color: grey;
+    font-family: "Ubuntu Sans", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+}
+.card p {
+    line-height: 4px;
 }
