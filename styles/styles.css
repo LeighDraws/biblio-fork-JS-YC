@@ -390,6 +390,10 @@ h3 {
     font-size: 24px;
 }
 
+h3 a {
+    color: white;
+}
+
 .auteur {
     color: #F23D3D;
     font-family: "Ubuntu Sans", sans-serif;
@@ -508,6 +512,19 @@ hr {
     margin-left: 5px;
     margin-right: 5px;
     border-radius: 100px;
+    -webkit-box-shadow: 0px 0px 12px 11px rgba(0,0,0,0);
+    -moz-box-shadow: 0px 0px 12px 11px rgba(0,0,0,0);
+    box-shadow: 0px 0px 12px 11px rgba(0,0,0,0);
+    transition: all .5s;
+    
+}
+
+.red-cta:hover {
+    background-color: #F23D3D;
+  
+    -webkit-box-shadow: 0px 0px 12px 11px rgba(0,0,0,0.7);
+-moz-box-shadow: 0px 0px 12px 11px rgba(0,0,0,0.7);
+box-shadow: 0px 0px 12px 11px rgba(0,0,0,0.7);
 }
 
 .red-cta img {
@@ -590,8 +607,182 @@ height: 40px;
     border-radius: 200px;
     border:1px solid white;
     margin: 0 auto;
-    margin-top: 200px;
+    margin-top: 120px;
 }
 
 
 
+
+
+
+
+.audiocoverblur img {
+    position: absolute;
+margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+top :0;
+overflow: hidden;
+text-align: center;
+height: 100vh!important;
+width: 100vw;
+
+    filter: blur(40px);
+    opacity: .5;
+    z-index: -10;
+}
+
+#audiobtn {
+    position: fixed;
+    bottom: 0px;
+    right: 0;
+    left: 0;
+    padding-bottom: 20px;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%);
+}
+
+#audiodetail {
+    
+    overflow-x: hidden;
+}
+
+#banneraudio {
+    display: block;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+   
+  
+}
+
+
+#banneraudio img {
+  width: 100%;
+ 
+}
+
+#audiocontent {
+
+    margin-top: -40px;
+}
+
+
+
+#audiocontent h5 {
+    color: white;
+    font-family: "Ubuntu Sans", sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    display: block;
+
+    padding-left: 20px;
+    padding-right: 20px;}
+
+#blockshadow {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 80px;
+    position: relative;
+    margin-top: -40px;
+}
+
+.curateur {
+    color: white;
+    font-family: "Ubuntu Sans", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    display: block;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.date {
+    color: white;
+    font-family: "Ubuntu Sans", sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+    display: block;
+    margin-top: -10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.bookmark {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+
+}
+
+.bookmark img {
+    width: 20px;
+}
+
+.pititext{
+    color: white;
+    font-family: "Ubuntu Sans", sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    display: block;
+    margin-top: -10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.pititext .empty {
+    display: block;
+    height: 300px;
+}
+
+#player {
+    display: none;
+    width: 100%;
+    height: 70px;
+    background-color: #CE2020;
+    margin-top: 20px;
+}
+
+
+#pp {
+    display: block;
+    width: 20px;
+    height: 20px;
+    z-index: 300;
+}
+
+
+#pp img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+}
+
+#sound {
+    display: block;
+height: 3px;
+background-color: white;
+width: 240px;
+    z-index: 300;
+    border-radius: 12px;
+    margin-top: 33px;
+    margin-left: 65px;
+}
+
+#soundplay {
+    width: 20px;
+    height: 20x;
+    margin-top: 23px;
+    margin-left: 20px;
+}
+
+#soundplay img{
+    width: 100%;
+}
+
+#stop {
+    margin-left: 30px;
+    margin-top: 20px;
+}
