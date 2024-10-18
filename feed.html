@@ -11,23 +11,51 @@
     </head>
     <body>
 
-        <div id="feedwrap">
+        <div id="search">
+            <input  class="white-btn-form" type="text" name="name" id="name" required placeholder="Search a book by title..."/>
+            <input class="validate" type="image" src="src/img/search.svg" />
+            <div id="close-search" onclick="masquersearch()">
+                <img src="src/img/close.svg" alt="">
+            </div>
+
+        </div>
+
+
+
+
+
+
             <nav>
                 <div id="logo"><img src="src/img/logo.svg" alt=""></div>
-                <div id="menu"> <img src="src/img/search.svg" alt=""> <img src="src/img/burger.svg" alt=""></div>
+                <div id="menu"> <img onclick="modalsearch();" src="src/img/search.svg" alt=""> <img src="src/img/burger.svg" alt=""></div>
             </nav>
 
+
+
+
+
+           
+
+
+
+
+
+
+
+
+
+            <div id="feedwrap">
             <div id="start"></div>
 
             <section class="excellent">
                 <h2>Excellent Storybooks</h2>
                 <div class="storybooks">
                     <div class="book">
-                        <a href="book.html"><img src="src/img/clown.jpg" alt=""></a>
+                        <a href="clown.html"><img src="src/img/clown.jpg" alt=""></a>
                     </div>
 
                     <div class="book">
-                        <a href="#"><img src="src/img/3body.jpg" alt=""></a>
+                        <a href="3body.html"><img src="src/img/3body.jpg" alt=""></a>
                     </div>
 
                     <div class="book">
@@ -119,5 +147,15 @@
 
         
         <script src="" async defer></script>
+        <script>
+            function modalsearch() {
+                document.getElementById("search").style.display = "block";
+                
+            }
+
+            function masquersearch() {
+                document.getElementById("search").style.display = "none"; 
+            }
+        </script>
     </body>
 </html>
