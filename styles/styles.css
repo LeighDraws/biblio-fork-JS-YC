@@ -192,9 +192,6 @@ nav #menu img {
     display: block;
 }
 
-section .scrollx {
-    
-}
 
 
 section h2 {
@@ -220,9 +217,6 @@ section h2::before{
     
 }
 
-.textwraper {
-    
-}
 
 .storybooks {
     display: flex;
@@ -251,8 +245,9 @@ section h2::before{
 .book {
     width: 190px;
     display: inline-block;
-    margin-left: 40px;
-    margin-right: 40px;
+    margin-left: 25px;
+    margin-right: 25px;
+    box-shadow: 0 0 5px black;
     
 
 }
@@ -265,3 +260,6 @@ section h2::before{
 }
 
 
+section{
+    margin-bottom: 50px;
+}
