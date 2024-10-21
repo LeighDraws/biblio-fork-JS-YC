@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+
+
+
+    <div id="search">
+        <input class="white-btn-form" type="text" name="name" id="name" required
+            placeholder="Search a book by title..." />
+        <input class="validate" type="image" src="src/img/search.svg" />
+        <div id="close-search" onclick="masquersearch()">
+            <img src="src/img/close.svg" alt="">
+        </div>
+
+    </div>
+
+
+
+
+
+    <nav>
+        <div id="logo"><img src="src/img/logo.svg" alt=""></div>
+        <div id="menu"> <img onclick="modalsearch();" src="src/img/search.svg" alt=""> <img src="src/img/burger.svg"
+                alt=""></div>
+        <div id="menuback"><a href="feed.html"> <img src="src/img/back.svg" alt=""></div></a>
+    </nav>
+
+    <div id="audiodetail">
+
+        <div id="start"></div>
+
+    <div class="audiocoverblur">
+        <img src="src/img/thana.jpg" alt="">
+    </div>
+
+    <div id="banneraudio">
+        <img src="src/img/thana.jpg" alt="">
+    </div>
+
+    <div id="audiocontent">
+        <h5>These book is litter with miraculous story Weirdtaies circuiated</h5>
+        <div id="blockshadow">
+            <p class="curateur">Nathan Vianey</p>
+            <p class="date">Today . 7min read</p>
+            <div class="bookmark"><img src="src/img/markempty.svg" alt=""></div>
+
+        </div>
+        <div class="pititext">
+            <p>
+                Les Thanatonautes est un roman de Bernard Werber, mêlant science et fantastique, publié en 1994 aux Éditions Albin Michel. Le mot Thanatonaute est une combinaison des racines grecques Thanato signifiant « la mort1 » et naute signifiant « navigateur2 » soit, littéralement, « navigateur de la mort » ou « explorateur de la mort. »
+
+Le romancier a déclaré avoir produit quelques chapitres de son livre Les Thanatonautes par écriture automatique : « Certains passages ont été écrits en écriture automatique. C'est-à-dire qu'il n'y avait pas d'intention d'intégrer le récit à une intrigue, mes doigts couraient tout seul sur le clavier et je relisais après pour découvrir ce que j'avais écrit3. » 
+            </p>
+            <p class="empty">  </p>
+
+              
+          
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+        <div id="audiobtn">
+            <div class="cta-bar">
+                <div class="cta">
+                    <a href="#"><button class="reserver red-cta">Book Now!</button></a>
+
+
+                    <a href="#"><button onclick="addplayer()" id="resume-btn" class="red-cta round "><img
+                                src="src/img/headphones.svg" alt=""></button></a>
+
+
+                    <a href="#"><button class="red-cta round"><img src="src/img/star.svg" alt=""></button></a>
+                </div>
+            </div>
+
+            <div id="player">
+                <div id="pp"><img src="src/img/thana.jpg" alt=""></div>
+                <div id="sound"> </div>
+                <div id="soundplay"><img src="src/img/play.svg" alt=""></div>
+                <div id="stop"><img src="src/img/close.svg" onclick="fermeplayer()" alt=""></div>
+            </div>
+
+        </div>
+
+
+
+        <script>
+            function addplayer() {
+                document.getElementById("player").style.display = "flex";
+
+            }
+
+            function fermeplayer() {
+                document.getElementById("player").style.display = "none";
+            }
+        </script>
+
+        <script>
+            function afficher() {
+                document.getElementById("resume").style.display = "block";
+
+            }
+
+            function masquer() {
+                document.getElementById("resume").style.display = "none";
+            }
+        </script>
+
+        <script>
+            function modalsearch() {
+                document.getElementById("search").style.display = "block";
+
+            }
+
+            function masquersearch() {
+                document.getElementById("search").style.display = "none";
+            }
+        </script>
+</body>
+
+</html>

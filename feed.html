@@ -11,23 +11,51 @@
     </head>
     <body>
 
-        < id="feedwrap">
+        <div id="search">
+            <input  class="white-btn-form" type="text" name="name" id="name" required placeholder="Search a book by title..."/>
+            <input class="validate" type="image" src="src/img/search.svg" />
+            <div id="close-search" onclick="masquersearch()">
+                <img src="src/img/close.svg" alt="">
+            </div>
+
+        </div>
+
+
+
+
+
+
             <nav>
                 <div id="logo"><img src="src/img/logo.svg" alt=""></div>
-                <div id="menu"> <img src="src/img/search.svg" alt=""> <img src="src/img/burger.svg" alt=""></div>
+                <div id="menu"> <img onclick="modalsearch();" src="src/img/search.svg" alt=""> <img src="src/img/burger.svg" alt=""></div>
             </nav>
 
+
+
+
+
+           
+
+
+
+
+
+
+
+
+
+            <div id="feedwrap">
             <div id="start"></div>
 
             <section class="excellent">
                 <h2>Excellent Storybooks</h2>
                 <div class="storybooks">
                     <div class="book">
-                        <a href="#"><img src="src/img/clown.jpg" alt=""></a>
+                        <a href="clown.html"><img src="src/img/clown.jpg" alt=""></a>
                     </div>
 
                     <div class="book">
-                        <a href="#"><img src="src/img/3body.jpg" alt=""></a>
+                        <a href="3body.html"><img src="src/img/3body.jpg" alt=""></a>
                     </div>
 
                     <div class="book">
@@ -60,7 +88,53 @@
 
             <section>
                 <h2>Music Player storybooks</h2>
-                
+                <div class="cards">
+                    <div class="card">
+                        <img src="src/img/thana.jpg" alt="Avatar" style="width:100%">
+                        <div class="container">
+                            <h3><a href="audiobook.html">thanatonautes</a></h3>
+                            <p class="auteur">Bernard Werber</p>
+                            <p class="time">Today - 7min Read</p>
+                            <div class="mark"><img  src="src/img/mark.svg" alt=""></div>
+                            <div class="dots"><img  src="src/img/dots.svg" alt=""></div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="src/img/maison.jpg" alt="Avatar" style="width:100%">
+                        <div class="container">
+                            <h3>La maison des feuilles</h3>
+                            <p class="auteur">BMark Z. Danielewski</p>
+                            <p class="time">Yesterday- 7min Read</p>
+                            <div class="mark"><img  src="src/img/mark.svg" alt=""></div>
+                            <div class="dots"><img  src="src/img/dots.svg" alt=""></div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="src/img/king.jpg" alt="Avatar" style="width:100%">
+                        <div class="container">
+                            <h3>If it bleeds</h3>
+                            <p class="auteur">Stephen King</p>
+                            <p class="time">3 days ago - 7min Read</p>
+                            <div class="mark"><img  src="src/img/mark.svg" alt=""></div>
+                            <div class="dots"><img  src="src/img/dots.svg" alt=""></div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="src/img/artemis.jpg" alt="Avatar" style="width:100%">
+                        <div class="container">
+                            <h3>Artemis Fowl</h3>
+                            <p class="auteur">Eoin Colfer</p>
+                            <p class="time">1 week ago - 7min Read</p>
+                            <div class="mark"><img  src="src/img/mark.svg" alt=""></div>
+                            <div class="dots"><img  src="src/img/dots.svg" alt=""></div>
+                        </div>
+                    </div>
+  
+                </div>
+            
 
             </section>
 
@@ -73,5 +147,15 @@
 
         
         <script src="" async defer></script>
+        <script>
+            function modalsearch() {
+                document.getElementById("search").style.display = "block";
+                
+            }
+
+            function masquersearch() {
+                document.getElementById("search").style.display = "none"; 
+            }
+        </script>
     </body>
 </html>
