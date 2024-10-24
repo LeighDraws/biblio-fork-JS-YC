@@ -21,6 +21,51 @@ async function getOneBook(id) {
 }
 
 getOneBook(paramsId).then((oneBook) => {
-  console.log("id " + oneBook.id);
-  console.log("title " + oneBook.volumeInfo.title);
+  const book = oneBook[0];
+  console.log("id " + book.id);
+  console.log("img " + book.volumeInfo.imageLinks.thumbnail);
+
+  let cover = document.getElementById("cover");
+
+  let resume = document.getElementById("resume");
+  let summary = document.createElement("p")
+  summary.textContent = book.volumeInfo.description;
+
+  resume.appendChild(summary);
+
+  let coverImg = document.createElement("img");
+  coverImg.src = book.volumeInfo.imageLinks.thumbnail;
+
+  cover.appendChild(coverImg)
+
+  let blurredCover = document.getElementById("coverblur");
+  let blurredImg = document.createElement("img");
+  blurredImg.src = book.volumeInfo.imageLinks.thumbnail;
+
+  blurredCover.appendChild(blurredImg)
+
+  let titleContainer = document.getElementById("title");
+  let title = document.createElement("h4")
+  title.textContent = book.volumeInfo.title;
+  titleContainer.appendChild(title);
+
+  let bookInfo = document.getElementById("book-info")
+
+  let author = document.createElement("p")
+  author.textContent = book.volumeInfo.authors[0];
+  author.classList.add("author")
+
+  let year = document.createElement("p");
+  let yearDate = book.volumeInfo.publishedDate.split('-')
+  year.textContent = yearDate[0];
+  year.classList.add("year")
+
+  let publisher = document.createElement("p")
+  publisher.textContent = book.volumeInfo.publisher;
+  publisher.classList.add("edition")
+
+  bookInfo.appendChild(author)
+  bookInfo.appendChild(year)
+  bookInfo.appendChild(publisher)
+
 });
