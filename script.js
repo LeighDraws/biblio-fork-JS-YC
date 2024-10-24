@@ -10,14 +10,18 @@ async function getBookList() {
         if (!res.ok) {
             throw new Error (`Response status: ${res.status}`);
         }
-
         const data = await res.json();
         const bookList = data.items;
+        return bookList;
     } catch (error) {
         console.log(error.message);
     }
 }
 
-getBookList();
+getBookList().then(bookList => {
+    console.log(bookList);
+
+    const bookDisplay = document.querySelectorAll('div[class="book"]')
 
 
+});
