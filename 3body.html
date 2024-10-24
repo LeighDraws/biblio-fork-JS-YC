@@ -13,14 +13,7 @@
 
 
 
-        <div id="search">
-            <input  class="white-btn-form" type="text" name="name" id="name" required placeholder="Search a book by title..."/>
-            <input class="validate" type="image" src="src/img/search.svg" />
-            <div id="close-search" onclick="masquersearch()">
-                <img src="src/img/close.svg" alt="">
-            </div>
-
-        </div>
+        
 
 
 
@@ -28,7 +21,7 @@
             
         <nav>
             <div id="logo"><img src="src/img/logo.svg" alt=""></div>
-            <div id="menu"> <img onclick="modalsearch();" src="src/img/search.svg" alt=""> <img src="src/img/burger.svg" alt=""></div>
+            <div id="menu"><a href="./feed-search.html" alt="search page"> <img src="src/img/search.svg" alt=""> <img src="src/img/burger.svg" alt=""></a></div>
             <div id="menuback"><a href="feed.html"> <img src="src/img/back.svg" alt=""></div></a>
         </nav>
 
@@ -100,15 +93,6 @@
 		}
         </script>
 
-<script>
-    function modalsearch() {
-        document.getElementById("search").style.display = "block";
-        
-    }
 
-    function masquersearch() {
-        document.getElementById("search").style.display = "none"; 
-    }
-</script>
     </body>
 </html>
