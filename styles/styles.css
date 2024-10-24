@@ -277,6 +277,17 @@ section h2::before{
 
 }
 
+.searchResult {
+    display: flex;
+    margin-top: 50px; 
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.searchResult > div{
+    margin-bottom: 24px;
+}
+
 /* Cacher la barre de défilement pour Chrome, Safari et Opera */
 .storybooks::-webkit-scrollbar {
     display: none;
