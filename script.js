@@ -50,7 +50,7 @@ async function getAllBooks (query) {
            const searchName = nameInput.value;
            getAllBooks(searchName).then(bookFound => {
             const resultDiv = document.getElementById('searchResult');
-            resultDiv.innerHTML= '';
+            resultDiv.innerHTML= '<h2>Results</h2>';
             bookFound.forEach(result => {
                 if (result.volumeInfo.imageLinks){
                     resultDiv.innerHTML += '<div class="book">' +
