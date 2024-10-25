@@ -1,6 +1,6 @@
 async function getBookList() {
   const API_URL =
-    "https://openlibrary.org/subjects/fantasy.json";
+    "https://openlibrary.org/subjects/magic.json";
 
   try {
     const res = await fetch(API_URL);
@@ -91,7 +91,7 @@ getBookCategory().then((bookList) => {
   
       let category = document.createElement("p");
       category.classList.add("time")
-      category.textContent = eachBook.subjects;
+      category.textContent = eachBook.subject[2];
   
       let mark = document.createElement("div");
       mark.classList.add("mark");
@@ -112,11 +112,11 @@ getBookCategory().then((bookList) => {
       bookCard.appendChild(bookImg);
       bookCard.appendChild(container);
       container.appendChild(bookLink);
-      container.appendChild(title)
-      container.appendChild(author)
-      container.appendChild(category)
-      container.appendChild(mark)
-      container.appendChild(dots)
+      bookLink.appendChild(title)
+      bookLink.appendChild(author)
+      bookLink.appendChild(category)
+      bookLink.appendChild(mark)
+      bookLink.appendChild(dots)
   
       musicBookContainer.appendChild(bookCard);
     }
