@@ -74,7 +74,8 @@ getOneBook(paramsId).then((oneBook) => {
 }) */
 
   let year = document.createElement("p");
-  let yearDate = book.created.value.split("-");
+  let date = book.created.value.split("-");
+  let yearDate = date[0];
   year.textContent = yearDate;
   year.classList.add("year");
 
