@@ -2,7 +2,6 @@
 const query = window.location.search;
 const urlParams = new URLSearchParams(query);
 const paramsId = urlParams.get("id");
-console.log(paramsId);
 
 async function getOneBook(id) {
   const API_URL = `https://www.googleapis.com/books/v1/volumes?q=`;
@@ -22,12 +21,7 @@ async function getOneBook(id) {
 }
 
 getOneBook(paramsId).then((oneBook) => {
-  let book = undefined;
-  oneBook.forEach(onlyOnebook => {
-    if(onlyOnebook.id == paramsId){
-      book = onlyOnebook
-    }
-  });
+  const book = oneBook[0];
 
   let cover = document.getElementById("cover");
 
