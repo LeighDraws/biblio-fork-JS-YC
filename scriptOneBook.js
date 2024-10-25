@@ -13,6 +13,7 @@ async function getOneBook(id) {
     }
     const data = await res.json();
     const oneBook = data;
+    console.log(oneBook)
     return oneBook;
   } catch (error) {
     console.log(error.message);
@@ -28,7 +29,6 @@ async function getOneAuthor(id) {
     }
     const data = await res.json();
     const oneAuthor = data;
-    console.log(oneAuthor.personal_name)
     return oneAuthor;
   } catch (error) {
     console.log(error.message);
@@ -41,10 +41,12 @@ getOneBook(paramsId).then((oneBook) => {
 
   let resume = document.getElementById("resume");
   let summary = document.createElement("p");
-  if(book.description.value){
+  if(book.description && book.description.value){
+    console.log(book.description.value)
     summary.textContent = book.description.value;
     resume.appendChild(summary);
   }
+ 
   
 
   let coverImg = document.createElement("img");
@@ -65,12 +67,10 @@ getOneBook(paramsId).then((oneBook) => {
 
   let bookInfo = document.getElementById("book-info");
 
-  console.log(book.authors[0].author.key)
   getOneAuthor(book.authors[0].author.key).then((oneAuthor) => {
   let author = document.createElement("p");
   author.textContent = oneAuthor.personal_name;
   author.classList.add("author");  
-  console.log(oneAuthor.personal_name)
   bookInfo.appendChild(author);
 }) 
 
