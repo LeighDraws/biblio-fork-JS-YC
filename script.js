@@ -63,9 +63,6 @@ async function getAllBooks (query) {
             
     form.addEventListener('submit', (event) => {
         event.preventDefault();
-         if(window.location.href !== "http://localhost:5500/feed.html"){
-            window.location.href = "http://localhost:5500/feed.html"  
-            }
         if(nameInput){
            const searchName = nameInput.value;
            getAllBooks(searchName).then(bookFound => {

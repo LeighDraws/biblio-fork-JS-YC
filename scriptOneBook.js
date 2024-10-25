@@ -8,6 +8,7 @@ async function getOneBook(id) {
   const API_URL = `https://www.googleapis.com/books/v1/volumes?q=`;
 
   try {
+    console.log(API_URL+id)
     const res = await fetch(API_URL + id);
     if (!res.ok) {
       throw new Error(`Response status: ${res.status}`);
@@ -21,9 +22,12 @@ async function getOneBook(id) {
 }
 
 getOneBook(paramsId).then((oneBook) => {
-  const book = oneBook[0];
-  console.log("id " + book.id);
-  console.log("img " + book.volumeInfo.imageLinks.thumbnail);
+  let book = undefined;
+  oneBook.forEach(onlyOnebook => {
+    if(onlyOnebook.id == paramsId){
+      book = onlyOnebook
+    }
+  });
 
   let cover = document.getElementById("cover");
 
