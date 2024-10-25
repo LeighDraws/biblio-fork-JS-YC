@@ -2,7 +2,6 @@
 const query = window.location.search;
 const urlParams = new URLSearchParams(query);
 const paramsId = urlParams.get("id");
-console.log(paramsId);
 
 async function getOneBook(id) {
   const API_URL = `https://www.googleapis.com/books/v1/volumes?q=`;
@@ -22,8 +21,6 @@ async function getOneBook(id) {
 
 getOneBook(paramsId).then((oneBook) => {
   const book = oneBook[0];
-  console.log("id " + book.id);
-  console.log("img " + book.volumeInfo.imageLinks.thumbnail);
 
   let cover = document.getElementById("cover");
 
