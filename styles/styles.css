@@ -252,6 +252,10 @@ section h2::before {
   margin-top: 50px;
   overflow-x: auto;
   white-space: nowrap;
+
+  overflow: scroll;
+  overflow-x: auto;
+  flex-shrink: 0;
 }
 
 .searchResult {
@@ -266,9 +270,9 @@ section h2::before {
 }
 
 /* Cacher la barre de défilement pour Chrome, Safari et Opera */
-.storybooks::-webkit-scrollbar {
+/* .storybooks::-webkit-scrollbar {
   display: none;
-}
+} */
 
 /* Cacher la barre de défilement pour IE et Edge */
 .storybooks {
@@ -384,9 +388,7 @@ h3 a {
   font-weight: 300;
   font-size: 16px;
 }
-.card p {
-  line-height: 4px;
-}
+
 
 #cover {
   width: 280px;
