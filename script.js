@@ -132,12 +132,11 @@ form.addEventListener("submit", (event) => {
           let cover = `https://covers.openlibrary.org/b/id/${result.cover_i}-M.jpg`
           resultDiv.innerHTML +=
             '<div class="book">' +
-            '<a href="#">' +
+            `<a href=book.html?id=${result.key}>`+
             '<img src='+cover+' alt="book-cover" />' + 
             "</a>" +
             "</div>";
         }
-
       });
       nameInput.value = "";
       document.getElementById("search").style.display = "none";
@@ -146,27 +145,3 @@ form.addEventListener("submit", (event) => {
 });
 
 
-function displayBooks(books) {
-  const container = document.getElementById("data-container");
-  const template = document.getElementById("book-template").content;
-
-  books.forEach((book) => {
-      const bookClone = template.cloneNode(true);
-
-      const coverId = book.cover_i;
-      bookClone.querySelector(".book-image").src = coverId
-          ? `https://covers.openlibrary.org/b/id/${coverId}-M.jpg`
-          : "https://via.placeholder.com/128x180?text=Pas+d'image";
-      bookClone.querySelector(".book-title").textContent =
-          book.title || "Titre non disponible";
-      bookClone.querySelector(".book-description").textContent =
-          book.first_publish_year
-              ? `Première publication : ${book.first_publish_year}`
-              : "Date de publication non disponible";
-      bookClone.querySelector(".book-author").textContent = book.author_name
-          ? `Auteur(s): ${book.author_name.join(", ")}`
-          : "Auteur inconnu";
-
-      container.appendChild(bookClone);
-  });
-}
