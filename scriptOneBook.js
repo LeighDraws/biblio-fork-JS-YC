@@ -28,7 +28,7 @@ async function getOneAuthor(id) {
     }
     const data = await res.json();
     const oneAuthor = data;
-    console.log(oneAuthor)
+    console.log(oneAuthor.personal_name)
     return oneAuthor;
   } catch (error) {
     console.log(error.message);
@@ -65,13 +65,14 @@ getOneBook(paramsId).then((oneBook) => {
 
   let bookInfo = document.getElementById("book-info");
 
-/*   getOneAuthor(book.authors[0].author.key).then((oneAuthor) => {
+  console.log(book.authors[0].author.key)
+  getOneAuthor(book.authors[0].author.key).then((oneAuthor) => {
   let author = document.createElement("p");
-  author.textContent = oneAuthor.personnal_name;
+  author.textContent = oneAuthor.personal_name;
   author.classList.add("author");  
-  console.log(oneAuthor.personnal_name)
+  console.log(oneAuthor.personal_name)
   bookInfo.appendChild(author);
-}) */
+}) 
 
   let year = document.createElement("p");
   let yearDate = book.created.value.split("-");
